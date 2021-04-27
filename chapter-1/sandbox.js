@@ -241,35 +241,35 @@
 //     console.log(event);
 // })
 
-const form = document.querySelector('.signup-form');
-const feedback = document.querySelector('.feedback');
-const usernamePattern = /^[a-zA-Z]{6,12}$/;
-// const username = document.getElementById('username');
-// const username = document.querySelector('#username');
-form.addEventListener('submit', event => {
-    // console.log('message');
-    event.preventDefault();
-    // console.log(username.value);
-    // console.log(form.username.value)
-    let username = form.username.value;
+// const form = document.querySelector('.signup-form');
+// const feedback = document.querySelector('.feedback');
+// const usernamePattern = /^[a-zA-Z]{6,12}$/;
+// // const username = document.getElementById('username');
+// // const username = document.querySelector('#username');
+// form.addEventListener('submit', event => {
+//     // console.log('message');
+//     event.preventDefault();
+//     // console.log(username.value);
+//     // console.log(form.username.value)
+//     let username = form.username.value;
 
-    if (usernamePattern.test(username)) {
-        feedback.textContent = 'username is valid';
-    } else {
-        feedback.textContent = 'username must contain letters only between 6 and 12 characters';
-    }
+//     if (usernamePattern.test(username)) {
+//         feedback.textContent = 'username is valid';
+//     } else {
+//         feedback.textContent = 'username must contain letters only between 6 and 12 characters';
+//     }
 
-});
+// });
 
-form.username.addEventListener('keyup', e => {
-    if (usernamePattern.test(e.target.value)) {
-        // console.log('passed');
-        form.username.setAttribute('class', 'success');
-    } else {
-        form.username.setAttribute('class', 'error');
-        // console.log('failed')
-    }
-});
+// form.username.addEventListener('keyup', e => {
+//     if (usernamePattern.test(e.target.value)) {
+//         // console.log('passed');
+//         form.username.setAttribute('class', 'success');
+//     } else {
+//         form.username.setAttribute('class', 'error');
+//         // console.log('failed')
+//     }
+// });
 
 // const username = 'shiva34233';
 // const pattern = /^[a-z]{6,}$/;
@@ -283,3 +283,22 @@ form.username.addEventListener('keyup', e => {
 // }
 
 // let result = username.search(pattern);
+
+const prices = [10, 30, 15, 25, 50, 40, 5];
+
+// const filteredScores = scores.filter((score) => {
+//     // return true;
+//     return score > 20;
+// })
+
+// console.log(filteredScores);
+
+// const users = [
+
+// ]
+
+// const salePrices = prices.map((price) => {
+//     return price / 2;
+// })
+
+// console.log(salePrices)
