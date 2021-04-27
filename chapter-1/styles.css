@@ -1,0 +1,36 @@
+/* .error {
+    padding: 10px;
+    color: crimson;
+    border: 1px dotted crimson;
+}
+
+.success {
+    padding: 10px;
+    color: limegreen;
+    border: 1px dotted limegreen;
+} */
+
+body {
+    background: #eee;
+}
+
+form {
+    max-width: 200px;
+    margin: 40px auto;
+    background: white;
+    padding: 10px;
+}
+
+input {
+    display: block;
+    margin: 10px auto;
+    padding: 4px;
+}
+
+.success {
+    border: 2px solid limegreen;
+}
+
+.error {
+    border: 2px solid crimson;
+}

@@ -137,3 +137,149 @@
 // console.log(random);
 
 // console.log(Math.round(random * 100))
+
+// const paragraph = document.querySelector('p');
+// const paragraph = document.querySelector('body > h1');
+// console.log(paragraph);
+
+// const paras = document.querySelectorAll('p');
+// console.log(paras);
+
+// const title = document.getElementById('page-title');
+// console.log(title)
+
+// const para = document.querySelector('p');
+// // console.log(para.innerText);
+// // para.innerText += ' learing js'
+
+// const paras = document.querySelectorAll('p');
+// paras.forEach((para) => {
+//     console.log(para.outerText);
+//     para.innerText += ' new text';
+// })
+
+// const content = document.querySelector('.content');
+// // console.log(content.innerHTML)
+// content.innerHTML += `<h2>This is new H2</h2>`
+
+// const para = document.querySelector('p');
+// console.log(para.classList)
+// para.classList.add('error');
+// para.classList.remove('error');
+// para.classList.add('success');
+
+// const paras = document.querySelectorAll('p');
+// paras.forEach(p => {
+//     if (p.textContent.includes('error')) {
+//         p.classList.add('error')
+//     } else if (p.textContent.includes('success')) {
+//         p.classList.add('success');
+//     }
+// })
+
+// const article = document.querySelector('article');
+
+// console.log(article.children);
+// console.log(Array.from(article.children));
+// Array.from(article.children).forEach((child) => {
+//     child.classList.add('article-element');
+// });
+
+// const title = document.querySelector('h2');
+
+// console.log(title.parentElement.parentElement)
+// console.log(title.nextElementSibling)
+// console.log(title.previousElementSibling)
+// console.log(title.previousElementSibling)
+
+// const button = document.querySelector('button');
+// button.addEventListener('click', () => {
+//     console.log(`you clicked`);
+// })
+// const button = document.querySelector('button');
+// const ul = document.querySelector('ul');
+
+// button.addEventListener('click', () => {
+//     // ul.innerHTML += `<li>New todo</li>`
+//     const li = document.createElement('li');
+//     li.textContent = 'New todo';
+//     ul.append(li);
+// });
+// ul.remove();
+// const items = document.querySelectorAll('li');
+// items.forEach(item => {
+//     item.addEventListener('click', (event) => {
+//         // console.log('item  clicked');
+//         // console.log(event);
+//         // console.log(event.target)
+//         // console.log(item)
+//         // event.target.style.textDecoration = 'line-through';
+//         event.target.remove()
+//     })
+// })
+
+// ul.addEventListener('click', (event) => {
+//     // console.log(event.target)
+//     if (event.target.tagName === 'LI') {
+//         event.target.remove();
+//     }
+// })
+
+// const copy = document.querySelector('.copy-me');
+// copy.addEventListener('copy', () => {
+//     console.log(`oi! my content is copyright`)
+// });
+
+// const box = document.querySelector('.box');
+// box.addEventListener('mousemove', event => {
+//     // console.log(event)
+//     // console.log(event.offsetX, event.offsetY)
+//     box.textContent = `x pos is - ${event.offsetX} y pos is - ${event.offsetY}`;
+// });
+
+// document.addEventListener('wheel', event => {
+//     console.log(event);
+// })
+
+const form = document.querySelector('.signup-form');
+const feedback = document.querySelector('.feedback');
+const usernamePattern = /^[a-zA-Z]{6,12}$/;
+// const username = document.getElementById('username');
+// const username = document.querySelector('#username');
+form.addEventListener('submit', event => {
+    // console.log('message');
+    event.preventDefault();
+    // console.log(username.value);
+    // console.log(form.username.value)
+    let username = form.username.value;
+
+    if (usernamePattern.test(username)) {
+        feedback.textContent = 'username is valid';
+    } else {
+        feedback.textContent = 'username must contain letters only between 6 and 12 characters';
+    }
+
+});
+
+form.username.addEventListener('keyup', e => {
+    if (usernamePattern.test(e.target.value)) {
+        // console.log('passed');
+        form.username.setAttribute('class', 'success');
+    } else {
+        form.username.setAttribute('class', 'error');
+        // console.log('failed')
+    }
+});
+
+// const username = 'shiva34233';
+// const pattern = /^[a-z]{6,}$/;
+// let result = pattern.test(username);
+// console.log(result)
+
+// if (result) {
+//     console.log(`regex test passed`);
+// } else {
+//     console.log(`regex test failed`);
+// }
+
+// let result = username.search(pattern);
