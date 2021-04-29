@@ -284,7 +284,7 @@
 
 // let result = username.search(pattern);
 
-const prices = [10, 30, 15, 25, 50, 40, 5];
+// const prices = [10, 30, 15, 25, 50, 40, 5];
 
 // const filteredScores = scores.filter((score) => {
 //     // return true;
@@ -302,3 +302,22 @@ const prices = [10, 30, 15, 25, 50, 40, 5];
 // })
 
 // console.log(salePrices)
+
+// localStorage.setItem('name', 'shiva');
+// localStorage.setItem('age', 29)
+
+// let name = localStorage.getItem('name');
+// let age = localStorage.getItem('age');
+// console.log(name, age);
+// localStorage.clear();
+// const todos = [
+//         { text: 'todo one', author: 'autho 1' },
+//         { text: 'todo two', author: 'autho 2' },
+//         { text: 'todo three', author: 'autho 3' }
+//     ]
+// console.log(JSON.stringify(todos));
+
+// localStorage.setItem('todos', JSON.stringify(todos));
+
+// const stored = localStorage.getItem('todos');
+// console.log(JSON.parse(stored));
