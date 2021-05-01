@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Chats</title>
+</head>
+
+<body>
+
+    <!-- containet and titles -->
+
+    <div class="container my-4">
+        <h1 class="my-4 text-center">
+            chats
+        </h1>
+
+        <!-- buttons for chatroom -->
+        <div class="chat-rooms mb-3 text-center">
+            <div class="my-2">choose a chat room:</div>
+            <button class="btn" id="general">#General</button>
+            <button class="btn" id="gmaing">#Gaming</button>
+            <button class="btn" id="music">#Music</button>
+            <button class="btn" id="ninjas">#Ninjsa</button>
+        </div>
+
+        <!-- chat list / window  -->
+        <div class="chat-window">
+            <ul class="chat-list list-group">
+
+            </ul>
+        </div>
+
+        <!-- new chat form  -->
+        <form class="new-chat my-3">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">Your message:</div>
+                </div>
+                <input type="text" id="message" class="form-control" required>
+                <div class="input-group-append">
+                    <input type="submit" value="send" class="btn">
+                </div>
+            </div>
+        </form>
+
+        <!-- updarte name form  -->
+        <form action="" class="new-name my-3">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">Update Name:</div>
+                </div>
+                <input type="text" class="form-control" id="name" required>
+                <div class="input-group-append">
+                    <input type="submit" value="update" class="btn">
+                </div>
+            </div>
+            <div class="update-msg"></div>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.30.1/date_fns.min.js" integrity="sha512-F+u8eWHrfY8Xw9BLzZ8rG/0wIvs0y+JyRJrXjp3VjtFPylAEEGwKbua5Ip/oiVhaTDaDs4eU2Xtsxjs/9ag2bQ==" crossorigin="anonymous"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-analytics.js"></script> -->
+
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyAHj_B6HpFxUUTnjLqnv3WGMlmAfeoxL0M",
+            authDomain: "modern-js-933b5.firebaseapp.com",
+            projectId: "modern-js-933b5",
+            storageBucket: "modern-js-933b5.appspot.com",
+            messagingSenderId: "450124021701",
+            appId: "1:450124021701:web:d27071b48350a424cf55ac",
+            measurementId: "G-NYNZ8JC2F2"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        // firebase.analytics();
+    </script>
+    <script src="scripts/chat.js"></script>
+    <script src="scripts/ui.js"></script>
+    <script src="scripts/app.js"></script>
+</body>
+
+</html>
